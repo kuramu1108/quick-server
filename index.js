@@ -22,7 +22,7 @@ app.get('/api/get', function(req, res) {
 })
 
 app.get('/api/teams/all', function(req, res) {
-    res.json(JSON.stringify(teams.teams()))
+    res.send(teams.teams())
 })
 
 app.listen(app.get('port'), function() {
