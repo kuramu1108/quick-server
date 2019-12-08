@@ -24,5 +24,8 @@ var teams = [
 module.exports = {
     teams: function() {
         return teams
+    },
+    version: function() {
+        return 1
     }
 }

@@ -25,6 +25,10 @@ app.get('/api/teams/all', function(req, res) {
     res.send(teams.teams())
 })
 
+app.get('/api/teams/version', function(req, res) {
+    res.send(teams.version())
+})
+
 app.listen(app.get('port'), function() {
     console.log('running on port', app.get('port'))
 })
