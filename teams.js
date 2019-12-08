@@ -26,6 +26,10 @@ module.exports = {
         return teams
     },
     version: function() {
-        return 1
+        return {
+            id: 0,
+            tableName: "teams",
+            version: 1
+        }
     }
 }
