@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
+const teams = require('./teams')
 const app = express()
 
 app.set('port', (process.env.PORT || 5000))
@@ -18,6 +19,10 @@ app.get('/api/get', function(req, res) {
         id: 1,
         parcel: 'done'
     })
+})
+
+app.get('/api/get/teams/all', function(req, res) {
+    res.send(JSON.stringify(teams.teams()))
 })
 
 app.listen(app.get('port'), function() {
