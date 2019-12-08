@@ -21,8 +21,8 @@ app.get('/api/get', function(req, res) {
     })
 })
 
-app.get('/api/get/teams/all', function(req, res) {
-    res.send(JSON.stringify(teams.teams()))
+app.get('/api/teams/all', function(req, res) {
+    res.json(JSON.stringify(teams.teams()))
 })
 
 app.listen(app.get('port'), function() {
