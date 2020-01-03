@@ -9,7 +9,7 @@ class Team {
 }
 
 var teams = [
-    new Team(0, "abc", "JAP", 5, "longtexxt"),
+    new Team(0, "cgb", "JAP", 5, "longtexxt"),
     new Team(1, "s", "JAP", 5, "longtexxt"),
     new Team(2, "abcsd", "JAP", 5, "longtexxt"),
     new Team(3, "abcddd", "JAP", 5, "l"),
@@ -29,7 +29,7 @@ module.exports = {
         return {
             id: 0,
             table_name: "teams",
-            version: 1
+            version: 2
         }
     }
 }
