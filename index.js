@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const teams = require('./teams')
+const posts = require('./posts')
 const app = express()
 
 app.set('port', (process.env.PORT || 5000))
@@ -27,6 +28,14 @@ app.get('/api/teams/all', function(req, res) {
 
 app.get('/api/teams/version', function(req, res) {
     res.send(teams.version())
+})
+
+app.get('/api/posts/all', function(req, res) {
+    res.send(posts.posts())
+})
+
+app.get('/api/posts/version', function(req, res) {
+    res.send(posts.version())
 })
 
 app.listen(app.get('port'), function() {
